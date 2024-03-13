@@ -9,7 +9,7 @@ const CARD=(props)=>{
             </div>
             <div className="card-body text-nowrap p-5">
 
-            props.feature.map((generaldata)=>{
+            props.feature.map((generaldata){
                   props.data.features.map((carddata)=>{
                    if(generaldata==carddata){
                        symbol="✔";console.log(symbol)
