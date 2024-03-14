@@ -53,22 +53,31 @@ const App=()=>{
       }
     ]}
 
-  return (
-    <div className="container rounded-3 p-5 m-5 bg-secondary h-100">
-      
-      <div className="row">
+    return (
+      <div className="container rounded-3 mt-5 p-4 bg-primary">
+        
+        <div className="row">
 
-          <div className="col-12 mt-4 col-lg-4"><CARD data={ data.cards[0] } feature={data.features}/></div>
-{/* 
-          <div className="col-12 mt-4 col-lg-4"><CARD data={ data.cards[1]} feature={data.features}/></div>
-          <div className="col-12 mt-4  col-lg-4"><CARD data={ data.cards[2]} feature={data.features}/></div> */}
-
+    {
+              
+                data.cards.map((card,index)=>{
+                  
+                  
+                    return <div className="col-12 col-lg-4">
+                        <CARD key={index} data={card} feature={data.features}/>
+                  </div>
+                })
+              
+              
+           }   
+            
+           
+  
+        </div>
+        
       </div>
-      
-    </div>
-
-  );
-
+  
+    )
 
 }
 

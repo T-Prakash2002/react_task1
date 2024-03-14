@@ -1,3 +1,10 @@
-.card{
-    min-width: fit-content;
+*{
+    font-family:poppins;
+}
+.container{
+    max-width: fit-content;
+}
+.col{
+    min-width: 500px;
+    max-width: 500px;
 }

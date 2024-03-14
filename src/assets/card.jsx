@@ -1,40 +1,44 @@
+import { Button } from "bootstrap";
+
+function text(x,y){
+    return (x.features.includes(y)?
+    <h5 className="pt-3"><b>&#x2713;</b>  {y}</h5>
+    :<h5 className="text-muted pt-3"><b>&#x2717;</b> {y}</h5>)
+}
 
 const CARD=(props)=>{
 
+    
+
     return(
-        <div className="card rounded-4">
+        <div className="card rounded-4 p-4">
             <div className="card-header text-center">
-                <p>{props.data.type}</p>
-                <h1>{props.data.cost}</h1>
+                <p className="text-muted"><strong>{props.data.type}</strong></p>
+                <h2>{props.data.cost}</h2>
             </div>
-            <div className="card-body text-nowrap p-5">
+            <div className="card-body text-nowrap p-4">
+                {
+                props.feature.map((feature,index)=>{
 
-            props.feature.map((generaldata){
-                  props.data.features.map((carddata)=>{
-                   if(generaldata==carddata){
-                       symbol="✔";console.log(symbol)
-                   }else{
-                       symbol="✘";
-                  }
+                    return (
+                        text(props.data,feature)
+                            
+                        );
+                        
+                })
 
-                  
-                 })
-              });
+                }
+                <div className="card-footer">
+                    <button className="btn btn-primary w-100 rounded-5 h-50" type="button">Button</button>
+                </div>
                 
-
-                {/* <h5>{props.data.features[0]}</h5>
-                <h5>{props.data.features[1]}</h5>
-                <h5>{props.data.features[2]}</h5>
-                <h5>{props.data.features[3]}</h5>
-                <h5>{props.data.features[4]}</h5>
-                <h5>{props.data.features[5]}</h5>
-                <h5>{props.data.features[6]}</h5>
-                <h5>{props.data.features[7]}</h5> */}
-
-
+                
             </div>
         </div>
     )
+
+
+
 
 }
 
