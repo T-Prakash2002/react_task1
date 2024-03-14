@@ -4,7 +4,7 @@
 .container{
     max-width: fit-content;
 }
-.col{
-    min-width: 500px;
+.card{
+    min-width: 250px;
     max-width: 500px;
 }

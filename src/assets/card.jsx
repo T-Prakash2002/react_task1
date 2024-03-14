@@ -1,14 +1,6 @@
 import { Button } from "bootstrap";
 
-function text(x,y){
-    return (x.features.includes(y)?
-    <h5 className="pt-3"><b>&#x2713;</b>  {y}</h5>
-    :<h5 className="text-muted pt-3"><b>&#x2717;</b> {y}</h5>)
-}
-
 const CARD=(props)=>{
-
-    
 
     return(
         <div className="card rounded-4 p-4">
@@ -16,24 +8,28 @@ const CARD=(props)=>{
                 <p className="text-muted"><strong>{props.data.type}</strong></p>
                 <h2>{props.data.cost}</h2>
             </div>
-            <div className="card-body text-nowrap p-4">
+
+            <div className="card-body text-nowrap">
+                
                 {
-                props.feature.map((feature,index)=>{
+                props.feature.map((feature)=>{
 
+                
                     return (
-                        text(props.data,feature)
-                            
-                        );
-                        
-                })
 
+                        (props.data.features.includes(feature)?
+                        <li className="pt-3"><b>&#x2713;</b>  {feature}</li>
+                        :<li className="text-muted pt-3"><b>&#x2717;</b> {feature}</li>)
+                                     
+                        );
+                    
+                })
                 }
-                <div className="card-footer">
+                 </div>
+            
+            <div className="card-footer">
                     <button className="btn btn-primary w-100 rounded-5 h-50" type="button">Button</button>
                 </div>
-                
-                
-            </div>
         </div>
     )
 

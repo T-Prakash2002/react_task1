@@ -1,4 +1,4 @@
-import CARD from './assets/card'
+import CARD from './assets/card.jsx'
 
 const App=()=>{
 
@@ -54,25 +54,19 @@ const App=()=>{
     ]}
 
     return (
+
+
       <div className="container rounded-3 mt-5 p-4 bg-primary">
-        
         <div className="row">
 
-    {
-              
+        {
                 data.cards.map((card,index)=>{
-                  
-                  
-                    return <div className="col-12 col-lg-4">
-                        <CARD key={index} data={card} feature={data.features}/>
+                    return<div className="col-12 col-lg-4" key={index}>
+                        <CARD data={card} feature={data.features}/>
                   </div>
                 })
-              
-              
            }   
-            
-           
-  
+ 
         </div>
         
       </div>
