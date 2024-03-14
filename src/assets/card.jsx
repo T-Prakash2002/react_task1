@@ -1,5 +1,3 @@
-import { Button } from "bootstrap";
-
 const CARD=(props)=>{
 
     return(
