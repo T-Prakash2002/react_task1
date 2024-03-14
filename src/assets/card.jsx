@@ -16,8 +16,8 @@ const CARD=(props)=>{
                     return (
 
                         (props.data.features.includes(feature)?
-                        <li className="pt-3"><b>&#x2713;</b>  {feature}</li>
-                        :<li className="text-muted pt-3"><b>&#x2717;</b> {feature}</li>)
+                        <h5 className="pt-3"><b>&#x2713;</b>  {feature}</h5>
+                        :<h5 className="text-muted pt-3"><b>&#x2717;</b> {feature}</h5>)
                                      
                         );
                     
